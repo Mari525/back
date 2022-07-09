@@ -4,11 +4,11 @@ from simple_history.models import HistoricalRecords
 # Create your models here.
 
 class Order(models.Model):
-  date = models.DateTimeField(blank=True)
+  # date = models.DateTimeField(blank=True)
   products = models.TextField()
-  courier = models.ForeignKey("Courier", on_delete=models.CASCADE, blank=True)
-  person = models.ForeignKey("Customer", on_delete=models.CASCADE, blank=True)
-  is_delivered = models.BooleanField(blank=True)
+  # courier = models.ForeignKey("Courier", on_delete=models.CASCADE, blank=True)
+  # person = models.ForeignKey("Customer", on_delete=models.CASCADE, blank=True)
+  # is_delivered = models.BooleanField(blank=True)
   history = HistoricalRecords()
 
   def __str__(self):
